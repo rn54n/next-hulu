@@ -4,8 +4,8 @@ import Nav from "../components/Nav";
 import Results from "../components/Results";
 import requests from "../utils/requests";
 
-export default function Home(props) {
-  console.log(props);
+export default function Home({ results }) {
+  console.log({ results });
   return (
     <div>
       <Head>
@@ -20,7 +20,7 @@ export default function Home(props) {
       <Nav />
 
       {/* Results */}
-      <Results />
+      <Results results={results} />
     </div>
   );
 }
